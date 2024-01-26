@@ -22,12 +22,12 @@ const LandingPage = () => {
 
     try {
       const response = await axios.post('http://localhost:5000/send_email', {
-        email:email,
-        message:message,
+        email: email,
+        message: message,
       });
 
       if (response.status === 200) {
-        console.log(response.data)
+        console.log(response.data);
         setEmail('');
         setMessage('');
       } else {
@@ -54,23 +54,25 @@ const LandingPage = () => {
 
   return (
     <Element name="landingPage">
-      <Container style={{ opacity }}>
-        <img src={logoImage} alt="Logo" style={{ maxWidth: '200px', marginBottom: '20px' }} />
+      <Container style={{ opacity, textAlign: 'center' }}>
+        <img
+          src={logoImage}
+          alt="Logo"
+          style={{ maxWidth: '300px', marginBottom: '20px', display: 'block', margin: '0 auto' }}
+        />
         <Typography variant="h2">Welcome to RunClub</Typography>
         <Typography variant="subtitle1">
-          Come and join the community. 
+          Come and join the community. Click <a href="https://example.com">here</a> to join.
         </Typography>
         <div style={{ marginTop: '20px' }}>
-          <Typography variant="body1">
-            Send us your inquiries or messages:
-          </Typography>
+          <Typography variant="body1">Send us your inquiries or messages:</Typography>
           <form
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '10px',
-              marginTop: '10px',
-              maxWidth: '300px', // Adjust as needed
+              gap: '15px', // Increase the gap for more spacing
+              marginTop: '15px', // Increase the marginTop for more spacing
+              maxWidth: '300px',
             }}
             onSubmit={handleSubmit}
           >
@@ -94,6 +96,17 @@ const LandingPage = () => {
               Submit
             </Button>
           </form>
+          <Button
+            variant="contained"
+            color="primary"
+            component="a"
+            href="https://www.zippy-reg.com/online_reg/confirmed_entrants.php?event=1952"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginTop: '15px' }} // Adjust marginTop for spacing
+          >
+            Race Registration
+          </Button>
         </div>
       </Container>
     </Element>
