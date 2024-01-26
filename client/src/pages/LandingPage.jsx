@@ -56,9 +56,9 @@ const LandingPage = () => {
     <Element name="landingPage">
       <Container style={{ opacity }}>
         <img src={logoImage} alt="Logo" style={{ maxWidth: '200px', marginBottom: '20px' }} />
-        <Typography variant="h2">Welcome to LunarGen</Typography>
+        <Typography variant="h2">Welcome to RunClub</Typography>
         <Typography variant="subtitle1">
-          Where we build all your software needs
+          Come and join the community. 
         </Typography>
         <div style={{ marginTop: '20px' }}>
           <Typography variant="body1">
