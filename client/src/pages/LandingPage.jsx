@@ -62,7 +62,7 @@ const LandingPage = () => {
         />
         <Typography variant="h2">Welcome to RunClub</Typography>
         <Typography variant="subtitle1">
-          Come and join the community. Click <a href="https://example.com">here</a> to join.
+          Come and join the community. 
         </Typography>
         <div style={{ marginTop: '20px' }}>
           <Typography variant="body1">Send us your inquiries or messages:</Typography>
