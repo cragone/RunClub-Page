@@ -54,7 +54,7 @@ const LandingPage = () => {
 
   return (
     <Element name="landingPage">
-      <Container style={{ opacity, textAlign: 'center' }}>
+      <Container style={{ opacity, textAlign: 'center', paddingTop: '50px', paddingBottom: '50px' }}>
         <img
           src={logoImage}
           alt="Logo"
@@ -64,15 +64,16 @@ const LandingPage = () => {
         <Typography variant="subtitle1">
           Come and join the community. 
         </Typography>
-        <div style={{ marginTop: '20px' }}>
+        <div style={{ marginTop: '30px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Typography variant="body1">Send us your inquiries or messages:</Typography>
           <form
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '15px', // Increase the gap for more spacing
-              marginTop: '15px', // Increase the marginTop for more spacing
+              gap: '15px',
+              marginTop: '15px',
               maxWidth: '300px',
+              margin: '0 auto',
             }}
             onSubmit={handleSubmit}
           >
@@ -100,10 +101,10 @@ const LandingPage = () => {
             variant="contained"
             color="primary"
             component="a"
-            href="https://www.zippy-reg.com/online_reg/confirmed_entrants.php?event=1952"
+            href="https://www.zippy-reg.com/online_reg/index.php?e=1952"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ marginTop: '15px' }} // Adjust marginTop for spacing
+            style={{ marginTop: '15px' }}
           >
             Race Registration
           </Button>
